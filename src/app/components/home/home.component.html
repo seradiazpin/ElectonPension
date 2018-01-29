@@ -1,0 +1,28 @@
+﻿<nav>
+  <div class="nav-wrapper light-green lighten-2">
+    <a href="#" class="brand-logo center">Procesos</a>
+  </div>
+</nav>
+<div class="row">
+  <div class="col s6">
+    <table>
+      <thead>
+        <tr>
+          <th>Documento</th>
+          <th>Nombre</th>
+          <th>Aciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{person[1]}}</td>
+          <td>{{person[0]}}</td>
+          <td>
+            <a class="waves-effect waves-light btn" [routerLink]="['/persons', person[1]]">Editar</a>
+            <a class="waves-effect waves-light btn red">Borrar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

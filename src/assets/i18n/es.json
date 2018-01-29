@@ -1,0 +1,52 @@
+﻿{
+  "PAGES": {
+    "HOME": {
+      "TITLE": "Funciona !"
+    },
+    "PERSONS": {
+
+    },
+    "PERSON": {
+      "NAME": "Nombre",
+      "CT": "Tipo de cotizacion",
+      "OBSERVATIONS": "Obsecaciones",
+      "GENERE": "Genero",
+      "MAIL": "Correo",
+      "BIRTHDAY": "Fecha Nacimiento",
+      "LQDAY": "Fecha Liquidacion",
+      "DDATA": {
+        "LABEL": "Datos Desicion",
+        "AGE1994": "Edad 1994",
+        "WEEKSQUOTATION": "Semanas Cotizadas",
+        "WEEKS1994": "Semanas al 1994",
+        "WEEKS2005" :  "Semanas al 2005"
+      },
+      "LDATA": {
+        "LABEL": "Datos Liquidacion",
+        "IBLLIFE": "Promedio IBL todaVida",
+        "IBL10Y": "Promedio IBL ultimos 10 años",
+        "IBL1Y": "Promedio IBL ultimo año",
+        "MONT": "Monto",
+        "MONTL797": "Monto Ley 797",
+        "NPAYMENT": "Nº Salarios minimos",
+        "PD758": "Valor pension decreto 758",
+        "PL7987": "Valor pension ley 797",
+        "PPUBLIC": "Valor pension publicos",
+        "PAORTS": "Valor pension aportes",
+        "COMPLETEDATE": "Fecha cumplimiento"
+      },
+      "TABLE": {
+        "DATEWH": "FECHA DESDE",
+        "DATETO": "FECHA ASTA",
+        "IBC": "IBC",
+        "WEEKS": "Nº SEMANAS ACUMULADAS",
+        "IPCFACTOR": "FACTOR IPC",
+        "PAYMENT": "SALARIO ACTUALIZADO",
+        "IBLLIFE": "IBL TODA LA VIDA",
+        "DAYS10Y": "Nº DIAS 10 AÑOS",
+        "IBL10Y": "IBL 10 AÑOS",
+        "DAYS1Y": "Nº DIAS 1 AÑO"
+      }
+    }
+  }
+}
