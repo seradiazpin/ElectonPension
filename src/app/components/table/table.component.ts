@@ -1,5 +1,5 @@
-﻿import { Component, OnInit } from '@angular/core';
-import { TableData } from './table-data';
+﻿import { Component, OnInit, Input } from '@angular/core';
+
 import { TranslateService } from "@ngx-translate/core";
 
 @Component({
@@ -9,28 +9,59 @@ import { TranslateService } from "@ngx-translate/core";
 })
 export class TableComponent implements OnInit {
     headers
+    @Input() TableData;
     constructor(private translate:TranslateService) {
-        this.length = this.data.length;
+        
     }
 
     ngOnInit() {
+        this.data = this.TableData
+        this,
+        console.log(this.TableData);
         this.onChangeTable(this.config);
+        this.length = this.data.length;
     }
-public rows:Array<any> = [];
-  public columns:Array<any> = [
+   public rows:Array<any> = [];
+   public columns:Array<any> = [
       {
-          title: "Fehca Desde", name: 'startDate', filtering: { filterString: '', placeholder: 'Filter by name' }
+          title: "Fehca Desde", name: 'fechaDesde'
       },
-    {
-      title: 'Position',
-      name: 'position',
-      sort: false,
-      filtering: {filterString: '', placeholder: 'Filter by position'}
-    },
-    {title: 'Office', className: ['office-header', 'text-success'], name: 'office', sort: 'asc'},
-    {title: 'Extn.', name: 'ext', sort: '', filtering: {filterString: '', placeholder: 'Filter by extn.'}},
-    {title: 'Start date', className: 'text-warning', name: 'name'},
-    {title: 'Salary ($)', name: 'salary'}
+      {
+          title: "Fehca Hasta", name: 'fechaHasta'
+      },
+      {
+          title: "IBC", name: 'IBC'
+      },
+      {
+          title: "IBL10Y", name: 'IBL10Y'
+      },
+      {
+          title: "IBLtlv", name: 'IBLtlv'
+      },
+      {
+          title: "IBLuy", name: 'IBLuy'
+      },
+      {
+          title: "diasEntre", name: 'diasEntre'
+      },
+      {
+          title: "factorIPC", name: 'factorIPC'
+      },
+      {
+          title: "numDias10Y", name: 'numDias10Y'
+      },
+      {
+          title: "numDiasuY", name: 'numDiasuY'
+      },
+      {
+          title: "salarioActualizado", name: 'salarioActualizado |'
+      },
+      {
+          title: "semanasAcumuladas", name: 'semanasAcumuladas'
+      },
+      {
+          title: "year", name: 'year'
+      }
   ];
   public page:number = 1;
   public itemsPerPage:number = 10;
@@ -45,7 +76,7 @@ public rows:Array<any> = [];
     className: ['striped', 'table-bordered']
   };
 
-  private data:Array<any> = TableData;
+  private data:Array<any> ;
 
   public changePage(page:any, data:Array<any> = this.data):Array<any> {
     let start = (page.page - 1) * page.itemsPerPage;

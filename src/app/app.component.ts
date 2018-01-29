@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
 
     ngOnInit() {
         $(".button-collapse").sideNav();
+        $('.button-collapse').sideNav('hide');
     }
 
   constructor(public electronService: ElectronService,

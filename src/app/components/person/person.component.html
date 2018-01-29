@@ -69,13 +69,10 @@
       </div>
     </div>
     <div id="test5" class="white">
-          <app-table></app-table>
+        <app-table *ngIf="datosPension" [TableData]="datosPension"></app-table>
     </div>
     <div id="test6">Test 3</div>
   </div>
 </div>
 
 
-<p>
-  {{personData|json}}
-</p>

@@ -11,6 +11,7 @@ export class PersonComponent implements OnInit, OnDestroy {
     personData
     datosDecision
     datosLiquidacion
+    datosPension
     private sub: any;
     constructor(private personasService: PersonasService, private route: ActivatedRoute) { }
   ngOnInit() {
@@ -28,6 +29,7 @@ export class PersonComponent implements OnInit, OnDestroy {
           this.personData = data;
           this.datosDecision = data["datosDecision"];
           this.datosLiquidacion = data["datosLiquidacion"];
+          this.datosPension = data["datosPension"];
           console.log(data);
       });
   }

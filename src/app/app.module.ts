@@ -43,8 +43,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
       AppRoutingModule,
       Ng2TableModule,
-      PaginationModule,
+      PaginationModule.forRoot(),
       TabsModule,
+      
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
